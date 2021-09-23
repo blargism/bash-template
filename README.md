@@ -18,6 +18,20 @@ A convenience function that presents a warning in "yellow" or whatever "\e\[0;33
 
 Provides the means to run a command that can fail without consiquence. It reports the run and the failure, but allows the script to continue.
 
+```bash
+# Runs fine, just some nice logging to say what is about to be run
+opt_run ls -al
+# Puts out the same logging, but also a warning at the end that things went wrong
+opt_run ls --bad-flag
+```
+
 ### `must_run`
 
 Provides the means to run a command that must not fail. If the command has any exit code other than 0 it exits the script with that same code.
+
+```bash
+# Runs fine, just some nice logging to say what is about to be run
+must_run ls -al
+# Puts out the same logging and an error after, then exits.
+must_run ls --bad-flag
+```
