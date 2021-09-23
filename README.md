@@ -10,9 +10,19 @@ This is an unlicensed bit of code in the public domain. Feel free to hack it up 
 
 A convinience function that announces you are performing the next step in a process.
 
+```bash
+# Announce the next step, notice quotes are not required
+ann_step There was something that went very wrong
+```
+
 ### `ann_warning`
 
 A convenience function that presents a warning in "yellow" or whatever "\e\[0;33;40m" ends up being on your terminal.
+
+```bash
+# Announce a warning, notice quotes are not required
+ann_warning There was something that went very wrong
+```
 
 ### `opt_run`
 
